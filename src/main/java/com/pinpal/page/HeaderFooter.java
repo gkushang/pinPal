@@ -2,20 +2,16 @@ package com.pinpal.page;
 
 
 import java.io.IOException;
-import java.util.List;
 
-import com.cukesrepo.domain.Feature;
-import com.cukesrepo.domain.Project;
 import org.apache.commons.lang3.StringUtils;
 import org.rendersnake.HtmlCanvas;
 
-import static org.rendersnake.HtmlAttributesFactory.*;
+import static org.rendersnake.HtmlAttributesFactory.class_;
+import static org.rendersnake.HtmlAttributesFactory.href;
 
 
 public class HeaderFooter
 {
-
-    private Project _project;
 
     protected void addScriptsAndStyleSheets(HtmlCanvas html) throws IOException
     {
@@ -60,7 +56,7 @@ public class HeaderFooter
                 .div(class_("cukes-logo bgColorA"))
                 .div(class_("cukesTitle"))
                 .span(class_("title"))
-                .content("")
+                .content("PinPal")
                 .span(class_("titlePart"))
                 .content("")
                 ._div()
@@ -69,29 +65,8 @@ public class HeaderFooter
 
         html.ul();
 
-        if (headerType.equalsIgnoreCase("featuresPage"))
-        {
-            html.li(class_("sub-menu-l")).
-                    a(class_("s-menu report-link").href("#")).content("Test Reports").
-                    ul();
-
-            _addTestReport(html, _project.getP1TestJob(), "P1");
-            _addTestReport(html, _project.getAcceptance(), "Acceptance");
-            _addTestReport(html, _project.getE2e(), "E2E");
-
-            if (StringUtils.isBlank(_project.getP1TestJob()) &&
-                    StringUtils.isBlank(_project.getAcceptance()) &&
-                    StringUtils.isBlank(_project.getE2e()))
-            {
-                html.li(class_("sub-menu")).a(class_("s-menu test-link").href("/projects/" + _project.getId() + "/settings"))
-                        .content("Add Reports (+)")._li();
-            }
-            html._ul();
-            html._li();
-        }
-
         html.
-                li().a(href("/projects/").class_("full")).content("Home").
+                li().a(href("/home/").class_("full")).content("").
                 _li().
                 _ul()
                 ._div()
@@ -119,130 +94,6 @@ public class HeaderFooter
         {
             html.li(class_("sub-menu")).a(class_("s-menu test-link").href(testReportUrl).target("_blank")).content(testReportTitle)._li();
         }
-    }
-
-    protected void renderScenarioHeader(HtmlCanvas html, Project project) throws IOException
-    {
-
-        html.html()
-                .body(class_("background-color-cukes"))
-                .div(class_("cukes-logo bgColorA"))
-                .div(class_("pageTitle"))
-                .span(class_("title"))
-                .content(" ")
-                .span(class_("titlePart"))
-                .content(" ")
-                .ul()
-
-                .li()
-                .a(href("/projects/" + project.getId() + "/").class_("full"))
-                .content(project.getName())
-                ._li()
-
-
-                .li()
-                .a(href("/projects/").class_("full"))
-                .content("Home")
-                ._li()
-
-                ._ul()
-                ._div()
-                ._div()
-                .div()._div();
-
-
-        html._body()
-                .html();
-
-
-    }
-
-
-    protected void renderDiscussionHeader(HtmlCanvas html, Project project, Feature feature) throws IOException
-    {
-
-        html.html()
-                .body(class_("background-color-cukes"))
-                .div(class_("cukes-logo bgColorA"))
-                .div(class_("pageTitle"))
-                .span(class_("title"))
-                .content(" ")
-                .span(class_("titlePart"))
-                .content(" ")
-                .ul()
-
-                .li()
-                .a(href("/projects/" + project.getId() + "/" + feature.getId() + "/").class_("full"))
-                .content("Scenarios")
-                ._li()
-
-
-                .li()
-                .a(href("/projects/" + project.getId() + "/").class_("full"))
-                .content(project.getName())
-                ._li()
-
-
-                .li()
-                .a(href("/projects/").class_("full"))
-                .content("Home")
-                ._li()
-
-                ._ul()
-                ._div()
-                ._div()
-                .div()._div();
-        ;
-
-        html._body()
-                .html();
-
-
-    }
-
-
-    protected void renderTitle(HtmlCanvas html) throws IOException
-    {
-
-        html.html()
-                .body()
-                .div(class_("cukes-logo bgColorA"))
-                .div(class_("pageTitle"))
-                .span(class_("title"))
-                .content("cukes ")
-                .span(class_("titlePart"))
-                .content("Repo")
-                ._div()
-                ._div();
-
-        html._body()
-                .html();
-
-
-    }
-
-    public void addLeftNavigationPane(HtmlCanvas html, String projectId, List<Feature> features) throws Throwable
-    {
-
-        html.div(class_("full-height"));
-
-//        html.li().a(href("/projects/").class_("full-abch")).span().content("<")._a()._li();
-//        html.li().a(href("/projects/").class_("full-abch")).span().content(">")._a()._li();
-//
-        for (Feature feature : features)
-        {
-            html.li().a(href("/projects/" + projectId + "/" + feature.getId() + "/").class_("full-h")).span().content(feature.getName())._a()._li();
-            html.br();
-        }
-        html._div();
-        html.div(id("main-low"));
-        html.br();
-
-    }
-
-    public void setProject(Project project)
-    {
-        _project = project;
     }
 
 

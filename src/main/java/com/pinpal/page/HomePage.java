@@ -3,13 +3,12 @@ package com.pinpal.page;
 
 import java.io.IOException;
 
-import com.pinpal.domain.Project;
 import com.pinpal.service.project.ProjectService;
 import org.apache.commons.lang.Validate;
 import org.rendersnake.HtmlCanvas;
 import org.rendersnake.Renderable;
 
-import static org.rendersnake.HtmlAttributesFactory.*;
+import static org.rendersnake.HtmlAttributesFactory.class_;
 
 
 public class HomePage extends HeaderFooter implements Renderable
@@ -32,37 +31,13 @@ public class HomePage extends HeaderFooter implements Renderable
 
         addScriptsAndStyleSheets(html);
 
-        renderHeader(html);
+        renderHeader(html, "homePage");
 
         html.html()
                 .body(class_("background-color-cukes"));
 
         html.br();
         html.br();
-
-        html.div(class_("projects-div-title").class_("background-color-cukes"));
-        html.h3().span(id("project-title")).content("projects");
-
-        html.a(href("/user/add-project"));
-        html.input(type("button").class_("cukes-button").id("add-new-project")
-                           .value("Add Project").style("float: right;"))._a();
-
-
-        html._h3();
-
-
-        for (Project project : _projectService.getProjects())
-        {
-            html.div(class_("project-links-div"));
-            html.h1()
-                    .a(href("/projects/" + project.getId() + "/settings")).img(class_("settings-icon-image"))
-                    .a(href(project.getId() + "/").class_("projects-a-links")).content(project.getName())
-                    ._a()
-                    ._h1();
-            html._div();
-        }
-
-        html._div();
         html._body()
                 ._html();
 
