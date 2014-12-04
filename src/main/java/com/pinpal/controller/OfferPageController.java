@@ -2,23 +2,24 @@ package com.pinpal.controller;
 
 import java.io.IOException;
 
-import com.pinpal.page.HomePage;
+import com.pinpal.page.OfferPage;
 import com.pinpal.service.project.ProjectService;
 import org.rendersnake.HtmlCanvas;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
-public class HomePageController
+public class OfferPageController
 {
 
     private final ProjectService _projectService;
 
     @Autowired
-    public HomePageController
+    public OfferPageController
             (
                     ProjectService projectService
             )
@@ -27,17 +28,25 @@ public class HomePageController
         _projectService = projectService;
     }
 
-    @RequestMapping(value = {"/home/"})
+    @RequestMapping(value = {"/offer/"})
     @ResponseBody
     public void renderProjectsPage
             (
                     HtmlCanvas html
             ) throws IOException
     {
-
-        html.render(new HomePage(_projectService));
-
+        html.render(new OfferPage(_projectService));
     }
 
+    @RequestMapping(value = {"/upload-product/"}, method = RequestMethod.POST)
+    @ResponseBody
+    protected void uploadPhoto
+            (
+
+            )
+    {
+
+
+    }
 }
 

@@ -1,90 +1,21 @@
-.cukes-logo
+
+div.project-title
 {
-    text-align:center;
-    /*font-size:50px;*/
-    padding:20px;
-    color: #87e89a;
-    font-weight:bold;
-    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
-
-    width: 100%;
-
-
+  color:white;
+  font-weight:bold;
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  font-size:22px;
+  letter-spacing: 0.9px;
 
 }
 
-
-.pageTitle
+div.header
 {
-
-    float:right;
-    height: auto;
-    width: auto;
-margin-top:-12px;
-
+   background-color:#009cde;
+   width:100%;
+   height:25px;
+   position: absolute;
+   padding: 10px 10px 10px 20px;
+   top: 0;
+   left:0;
 }
-
-.navigation-pane
-{
-    width:100%;
-    background-color:#47dc89;
-}
-
-.navigation-pane ul
-{
-  /*  display: inline-block;
-    list-style-type: none;*/
-
-    list-style-type:none;
-    margin:10px;
-    padding:0px;
-    overflow:hidden;
-    float:right;
-
-}
-
-a.full
-{
-    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
-
-    font-weight:bold;
-    font-size:0.80em;
-    color:#FFFFFF;
-
-
-
-    text-decoration:none;
-    text-transform:uppercase;
-    text-align:left;
-    width:125px;
-    display:inline;
-    list-style-type:none;
-    float:right;
-}
-
-.bgColorA {
-  position: relative;
-  background: blue;
-
-}
-.bgColorA:before, h2:after {
-  content: "";
-  position: absolute;
-  background: #5CBF69;
-
-  width: 100%;
-
-     margin:0;
-      padding:0;
-
-
-}
-.bgColorA:before {
-
-  right: 100%;
-}
-.bgColorA:after {
-
-  left: 100%;
-}
-
