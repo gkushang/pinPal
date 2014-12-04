@@ -48,6 +48,7 @@ public class OfferPage extends HeaderFooter implements Renderable
 
                 .div(class_("buttons"))
                 .input(type("button").class_("continue-pinit").id("continue").value("Continue"))
+                .input(type("button").class_("back-product").id("continue").style("float:left").value("Back"))
                 ._div()
 
                 ._div()

@@ -18,6 +18,7 @@ public class HeaderFooter
         html.head()
                 .macros().javascript("/../../resources/scripts/jquery-1.10.2.min.js")
                 .macros().javascript("/../../resources/scripts/continue.js")
+                .macros().javascript("/../../resources/scripts/back.js")
 
                 .macros().stylesheet("/../../resources/css/headerfooter.css")
                 .macros().stylesheet("/../../resources/css/homepage.css")

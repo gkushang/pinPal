@@ -2,15 +2,32 @@
 
 jQuery(document).ready(function() {
 
-        $(".buttons .continue-product").on('click',function() {
+        $(".buttons .back-photo").on('click',function() {
 
 
         var me = $(this);
 
              $.ajax({
 
-                type: "POST",
-                url: "/upload-photo/"
+                    }).done(function(data) {
+
+                    top.location.href = "/photo/";
+
+                                                          });
+
+            });
+});
+
+
+
+jQuery(document).ready(function() {
+
+        $(".buttons .back-product").on('click',function() {
+
+
+        var me = $(this);
+
+             $.ajax({
 
                     }).done(function(data) {
 
@@ -24,14 +41,12 @@ jQuery(document).ready(function() {
 
 jQuery(document).ready(function() {
 
-        $(".buttons .continue-offer").on('click',function() {
+        $(".buttons .back-offer").on('click',function() {
+
 
         var me = $(this);
 
              $.ajax({
-
-                type: "POST",
-                url: "/upload-product/"
 
                     }).done(function(data) {
 
@@ -42,24 +57,3 @@ jQuery(document).ready(function() {
             });
 });
 
-
-jQuery(document).ready(function() {
-
-        $(".buttons .continue-pinit").on('click',function() {
-
-
-        var me = $(this);
-
-             $.ajax({
-
-                type: "POST",
-                url: "/pin-it-done/"
-
-                    }).done(function(data) {
-
-                    top.location.href = "/pin-it/";
-
-                                                          });
-
-            });
-});

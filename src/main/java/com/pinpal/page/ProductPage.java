@@ -48,6 +48,7 @@ public class ProductPage extends HeaderFooter implements Renderable
 
                 .div(class_("buttons"))
                 .input(type("button").class_("continue-offer").id("continue").value("Continue"))
+                .input(type("button").class_("back-photo").id("continue").style("float:left").value("Back"))
                 ._div()
 
                 ._div()
