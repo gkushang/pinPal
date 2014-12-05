@@ -5,12 +5,29 @@ div.step
 color:blue;
 margin-top:100px;
 padding:40px 10px 50px 50px;
+display: block;
+width:100%;
+vertical-align: middle;
 
+}
+
+div.step-name-number
+{
+   width:2px;
+   height:30px;
+}
+
+span.step-number
+{
+   color: #009cde;
+   font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+   font-size:22px;
+   letter-spacing: 0.9px;
 }
 
 span.step-name
 {
- color: #009cde;
+  color: #009cde;
    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
    font-size:22px;
    letter-spacing: 0.9px;
@@ -27,6 +44,8 @@ span.active
 div.main-step
 {
  text-align:center;
+
+
 }
 
 div.main
@@ -38,25 +57,33 @@ div.main
    width:70%;
    margin: 0 auto;
 
+
+
+}
+
+#continue:hover
+{
+   text-decoration:underline;
+
+   padding-bottom: 8px;
 }
 
 #continue
 {
-  color:white;
-  background-color:#009cde;
-  width:10%;
-  height:8%;
+  color:#009cde;
+
+  width:6%;
+  height:3%;
 
   font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
-  font-size:14px;
+  font-size:16px;
   letter-spacing: 0.9px;
 
+  float:right;
+   margin-top:365;
+    display: inline-block;
+    text-decoration:none;
 }
 
 
-div.buttons
-{
-  text-align:right;
-  margin-top:345px;
-  padding:10px 10px 10px 10px;
-}
+

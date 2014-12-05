@@ -46,10 +46,13 @@ public class PinItPage extends HeaderFooter implements Renderable
 
                 .div(class_("main active"))
 
-                .div(class_("buttons"))
-                .input(type("button").class_("continue-done").id("continue").value("Pin It"))
-                .input(type("button").class_("back-offer").id("continue").style("float:left").value("Back"))
+                .div(class_("image-container"))
+                .img(class_("photo-image").id("blah").src("").alt(""))
                 ._div()
+
+
+                .input(type("button").class_("continue-done").id("continue").value("Pin It"))
+                .a(href("/offer/").id("continue").style("float:left")).content("Back")
 
                 ._div()
                 ._div()

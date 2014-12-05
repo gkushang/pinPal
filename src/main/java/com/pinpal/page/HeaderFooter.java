@@ -19,9 +19,14 @@ public class HeaderFooter
                 .macros().javascript("/../../resources/scripts/jquery-1.10.2.min.js")
                 .macros().javascript("/../../resources/scripts/continue.js")
                 .macros().javascript("/../../resources/scripts/back.js")
+                .macros().javascript("/../../resources/scripts/upload.js")
 
                 .macros().stylesheet("/../../resources/css/headerfooter.css")
                 .macros().stylesheet("/../../resources/css/homepage.css")
+                .macros().stylesheet("/../../resources/css/photo.css")
+                .macros().stylesheet("/../../resources/css/product.css")
+                .macros().stylesheet("/../../resources/css/offer.css")
+                .macros().stylesheet("/../../resources/css/pin-it.css")
 
                 .head().title().content("PinPal")._head()
                 ._head();

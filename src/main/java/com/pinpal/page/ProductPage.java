@@ -46,10 +46,34 @@ public class ProductPage extends HeaderFooter implements Renderable
 
                 .div(class_("main active"))
 
-                .div(class_("buttons"))
-                .input(type("button").class_("continue-offer").id("continue").value("Continue"))
-                .input(type("button").class_("back-photo").id("continue").style("float:left").value("Back"))
+                .div(class_("image-container"))
+                .img(class_("photo-image").id("blah").src("").alt(""))
                 ._div()
+
+                .div(class_("product-description"))
+                .span(class_("element-title")).content("Description").br()
+                .textarea(class_("prd-description").id("description").cols("20").rows("3")).content("").br()
+
+                .div(id("element-man"))
+                .span(class_("element-title").id("element-man")).content("Manufacture").br()
+                .input(type("text").class_("element-box").id("manufacture-id").value("")).br()
+                ._div()
+
+                .div(id("element-item"))
+                .span(class_("element-title").id("element-item")).content("Item Name").br()
+                .input(type("text").class_("element-box").id("item-id").value("")).br()
+                ._div()
+
+                .div(id("element-sku"))
+                .span(class_("element-title").id("element-sku")).content("SKU").br()
+                .input(type("text").class_("element-box").id("sku-id").value("")).br()
+                ._div()
+
+                ._div()
+
+                .a(href("/offer/").id("continue-next-on-prod").class_("product-next")).content("Next")
+                .a(href("/photo/").id("continue-back-on-prod").class_("product-next").style("float:left")).content("Back")
+
 
                 ._div()
                 ._div()

@@ -2,7 +2,7 @@
 
 jQuery(document).ready(function() {
 
-        $(".buttons .back-photo").on('click',function() {
+        $(".back-photo").on('click',function() {
 
 
         var me = $(this);
@@ -22,7 +22,7 @@ jQuery(document).ready(function() {
 
 jQuery(document).ready(function() {
 
-        $(".buttons .back-product").on('click',function() {
+        $(".back-product").on('click',function() {
 
 
         var me = $(this);
@@ -41,7 +41,7 @@ jQuery(document).ready(function() {
 
 jQuery(document).ready(function() {
 
-        $(".buttons .back-offer").on('click',function() {
+        $(".back-offer").on('click',function() {
 
 
         var me = $(this);
@@ -56,4 +56,3 @@ jQuery(document).ready(function() {
 
             });
 });
-

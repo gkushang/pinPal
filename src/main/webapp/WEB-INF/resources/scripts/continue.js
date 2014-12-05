@@ -2,7 +2,7 @@
 
 jQuery(document).ready(function() {
 
-        $(".buttons .continue-product").on('click',function() {
+        $(".continue-product").on('click',function() {
 
 
         var me = $(this);
@@ -24,7 +24,7 @@ jQuery(document).ready(function() {
 
 jQuery(document).ready(function() {
 
-        $(".buttons .continue-offer").on('click',function() {
+        $(".continue-offer").on('click',function() {
 
         var me = $(this);
 
@@ -45,7 +45,7 @@ jQuery(document).ready(function() {
 
 jQuery(document).ready(function() {
 
-        $(".buttons .continue-pinit").on('click',function() {
+        $(".continue-pinit").on('click',function() {
 
 
         var me = $(this);
