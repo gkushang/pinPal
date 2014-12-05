@@ -53,28 +53,37 @@ div#element-item, div#element-sku
 }
 
 
-.product-next:hover
+.product-next-a:hover
 {
    text-decoration:underline;
 
    padding-bottom: 8px;
 }
 
-.product-next
+.product-next-a
 {
   color:#009cde;
-
-  width:6%;
-  height:3%;
 
   font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
   font-size:16px;
   letter-spacing: 0.9px;
+  text-decoration:none;
+}
+
+.product-next
+{
+
+  width:36.6%;
+  height:3%;
+
 
   float:right;
    margin-top:30;
     display: inline-block;
     text-decoration:none;
+    position:absolute;
+    margin-left:-264px;
+
 }
 
 
