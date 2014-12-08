@@ -6,10 +6,32 @@
 
 }
 
-.continue-back-pin
+#continue-pin:hover
 {
-    margin-top:182px;
-    margin-left:12px;
-    text-align:left;
+   text-decoration:underline;
+
+   padding-bottom: 8px;
+}
+
+#continue-pin
+{
+  color:#009cde;
+
+  width:6%;
+  height:3%;
+
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  font-size:16px;
+  letter-spacing: 0.9px;
+
+  float:right;
+   margin-top:195;
+    display: inline-block;
+    text-decoration:none;
+}
+
+
+#pin-it-button
+{
 
 }

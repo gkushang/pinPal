@@ -60,7 +60,7 @@ public class PinItPage extends HeaderFooter implements Renderable
 
                 ._div()
 
-                .a(href("/offer/").id("continue").class_("continue-back-pin").style("float:left")).content("Back")
+                .a(href("/offer/").id("continue-pin").class_("continue-back-pin").style("float:left")).content("Back")
 
 
                 ._div()
