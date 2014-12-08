@@ -1,6 +1,7 @@
 package com.pinpal.controller;
 
 import java.io.IOException;
+import javax.servlet.http.HttpServletRequest;
 
 import com.pinpal.page.PinItPage;
 import com.pinpal.service.project.ProjectService;
@@ -44,10 +45,12 @@ public class PinItPageController
     @ResponseBody
     protected void uploadPhoto
             (
-
+                    HttpServletRequest request
             )
     {
 
+        System.out.print("image data: ");
+        System.out.print("image data: " + request.getParameter("imgData"));
 
     }
 }

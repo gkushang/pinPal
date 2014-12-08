@@ -7,7 +7,7 @@
   margin-top:50px;
   float:center;
   margin-left:38px;
-  margin-top:10px;
+  margin-top:2px;
   resize:none;
 
 }
@@ -41,7 +41,7 @@ input.element-box
 
 div#element-man
 {
-  margin-top:140px;
+  margin-top:135px;
   margin-left:38px;
 }
 
@@ -82,7 +82,7 @@ div#element-item, div#element-sku
     display: inline-block;
     text-decoration:none;
     position:absolute;
-    margin-left:-264px;
+    margin-left:-254px;
 
 }
 

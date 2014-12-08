@@ -12,13 +12,26 @@ function readURL(input) {
 
 
                 reader.onload = function (e) {
-                alert(e.target.result);
+
                     $('#blah')
                         .attr('src', e.target.result)
                         .width(150)
                         .height(200);
+
+
                 };
 
                 reader.readAsDataURL(input.files[0]);
+
+                             $.ajax({
+
+                                type: "POST",
+                                url: "/pin-it-done/",
+                                data:{imgData: e.target.result}
+
+                                    }).done(function(data) {
+
+
+                                                                          });
             }
         }

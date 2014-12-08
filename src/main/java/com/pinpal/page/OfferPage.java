@@ -25,6 +25,7 @@ public class OfferPage extends HeaderFooter implements Renderable
 
     }
 
+
     @Override
     public void renderOn(HtmlCanvas html) throws IOException
     {
@@ -51,8 +52,37 @@ public class OfferPage extends HeaderFooter implements Renderable
                 ._div()
 
 
-                .a(href("/pin-it/").id("continue")).content("Next")
-                .a(href("/product/").id("continue").style("float:left")).content("Back")
+                .div(id("element-r-price"))
+                .span(class_("element-title").id("element-r-price")).content("Retail Price $").br()
+                .input(type("text").class_("element-box").id("r-price-id").value("")).br()
+                ._div()
+
+                .div(id("element-d-perc"))
+                .span(class_("element-title").id("element-d-perc")).content("Discount %").br()
+                .input(type("text").class_("element-box").id("d-perc-id").value("")).br()
+                ._div()
+
+                .div(id("element-d-price"))
+                .span(class_("element-title").id("element-d-price")).content("Discount Price $").br()
+                .input(type("text").class_("element-box").id("d-price-id").value("")).br()
+                ._div()
+
+                .div(id("element-s-date"))
+                .span(class_("element-title").id("element-s-date")).content("Start Date").br()
+                .input(type("text").class_("element-box").id("s-date-id").value("")).br()
+                ._div()
+
+                .div(id("element-e-date"))
+                .span(class_("element-title").id("element-e-date")).content("End Date").br()
+                .input(type("text").class_("element-box").id("e-date-id").value("")).br()
+                ._div()
+
+
+                .div(class_("product-next"))
+                .a(href("/pin-it/").id("continue-next-on-prod").class_("product-next-a").style("float:right")).content("Next")
+                .a(href("/product/").id("continue-back-on-prod").class_("product-next-a").style("float:left")).content("Back")
+                ._div()
+
 
                 ._div()
                 ._div()
@@ -61,29 +91,4 @@ public class OfferPage extends HeaderFooter implements Renderable
                 ._html();
     }
 
-    private void tabs(HtmlCanvas html) throws IOException
-    {
-        html.div(class_("tabs"))
-                .ul(class_("tab-links"))
-                .li(class_("active")).a(href("#photo")).content("Photo")._li()
-                .li().a(href("#offer")).content("Offer")._li()
-                .li().a(href("#publish")).content("Publish")._li()
-                ._ul()
-
-                .div(class_("tab-content"))
-                .div(id("tab1").class_("tab active"))
-                .p().content("photo content")
-                ._div()
-
-                .div(id("tab2").class_("tab"))
-                .p().content("offer content")
-                ._div()
-
-                .div(id("tab3").class_("tab"))
-                .p().content("publish content")
-                ._div()
-
-                ._div()
-                ._div();
-    }
 }
