@@ -26,7 +26,7 @@ public class HeaderFooter
                 .macros().stylesheet("/../../resources/css/photo.css")
                 .macros().stylesheet("/../../resources/css/product.css")
                 .macros().stylesheet("/../../resources/css/offer.css")
-                .macros().stylesheet("/../../resources/css/pin-it.css")
+                .macros().stylesheet("/../../resources/css/pinit.css")
 
                 .head().title().content("PinPal")._head()
                 ._head();

@@ -38,6 +38,8 @@ span.step-name
 span.active
 {
   font-weight:bold;
+  font-size:28px;
+  transition: color 1s, font-size 1s;
 
 }
 
