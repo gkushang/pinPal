@@ -20,7 +20,7 @@ public class HeaderFooter
                 .macros().javascript("/../../resources/scripts/continue.js")
                 .macros().javascript("/../../resources/scripts/back.js")
                 .macros().javascript("/../../resources/scripts/upload.js")
-
+                .macros().javascript("//assets.pinterest.com/js/pinit.js")
                 .macros().stylesheet("/../../resources/css/headerfooter.css")
                 .macros().stylesheet("/../../resources/css/homepage.css")
                 .macros().stylesheet("/../../resources/css/photo.css")
