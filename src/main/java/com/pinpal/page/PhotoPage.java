@@ -37,25 +37,12 @@ public class PhotoPage extends HeaderFooter implements Renderable
 
                 .div(class_("step"))
 
-//                .div(class_("step-name-number"))
-//                .span(class_("step-number active")).content("1")
                 .span(class_("step-name active")).content("Photo")
-//                ._div()
 
-//                .div(class_("step-name-number"))
-//                .span(class_("step-name")).content("2")
                 .span(class_("step-name")).content("Product")
-//                ._div()
 
-//                .div(class_("step-name-number"))
-//                .span(class_("step-number")).content("3")
                 .span(class_("step-name")).content("Offer")
-//                ._div()
-
-//                .div(class_("step-name-number"))
-//                .span(class_("step-number")).content("4")
                 .span(class_("step-name")).content("Pin-it")
-//                ._div()
 
                 ._div()
 
