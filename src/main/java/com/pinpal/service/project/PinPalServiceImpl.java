@@ -1,6 +1,5 @@
 package com.pinpal.service.project;
 
-import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 import sun.misc.BASE64Encoder;
 
@@ -90,7 +89,7 @@ public class PinPalServiceImpl implements PinPalService
             return "data:image/jpeg;base64," + encoder.encode(imageBytes);
         }
 
-        return StringUtils.EMPTY;
+        return " ";
     }
 
     @Override
