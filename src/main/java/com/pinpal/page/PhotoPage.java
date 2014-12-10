@@ -64,7 +64,7 @@ public class PhotoPage extends HeaderFooter implements Renderable
                 .div(class_("main active"))
 
                 .div(class_("image-container"))
-                .img(class_("photo-image").id("blah").src(_projectService.getImageBytes()).alt(""))
+                .img(class_("photo-image").id("blah").src(_projectService.getImage()).alt(""))
                 ._div()
 
                 .form(id("uploadform").method("POST").enctype("multipart/form-data"))

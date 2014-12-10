@@ -47,7 +47,7 @@ public class ProductPage extends HeaderFooter implements Renderable
                 .div(class_("main active"))
 
                 .div(class_("image-container"))
-                .img(class_("photo-image").id("blah").src(_pinPalService.getImageBytes()).alt(""))
+                .img(class_("photo-image").id("blah").src(_pinPalService.getImage()).alt(""))
                 ._div()
 
                 .div(class_("product-description"))
