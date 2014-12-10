@@ -3,7 +3,7 @@ package com.pinpal.page;
 
 import java.io.IOException;
 
-import com.pinpal.service.project.ProjectService;
+import com.pinpal.service.project.PinPalService;
 import org.apache.commons.lang.Validate;
 import org.rendersnake.HtmlCanvas;
 import org.rendersnake.Renderable;
@@ -14,14 +14,14 @@ import static org.rendersnake.HtmlAttributesFactory.*;
 public class ProductPage extends HeaderFooter implements Renderable
 {
 
-    public ProjectService _projectService;
+    public PinPalService _pinPalService;
 
-    public ProductPage(ProjectService projectService)
+    public ProductPage(PinPalService pinPalService)
     {
 
-        Validate.notNull(projectService, "projectService cannot be null");
+        Validate.notNull(pinPalService, "pinPalService cannot be null");
 
-        _projectService = projectService;
+        _pinPalService = pinPalService;
 
     }
 
@@ -47,7 +47,7 @@ public class ProductPage extends HeaderFooter implements Renderable
                 .div(class_("main active"))
 
                 .div(class_("image-container"))
-                .img(class_("photo-image").id("blah").src("").alt(""))
+                .img(class_("photo-image").id("blah").src(_pinPalService.getImageBytes()).alt(""))
                 ._div()
 
                 .div(class_("product-description"))

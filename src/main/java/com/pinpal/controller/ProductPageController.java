@@ -3,7 +3,7 @@ package com.pinpal.controller;
 import java.io.IOException;
 
 import com.pinpal.page.ProductPage;
-import com.pinpal.service.project.ProjectService;
+import com.pinpal.service.project.PinPalService;
 import org.rendersnake.HtmlCanvas;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ProductPageController
 {
 
-    private final ProjectService _projectService;
+    private final PinPalService _projectService;
 
     @Autowired
     public ProductPageController
             (
-                    ProjectService projectService
+                    PinPalService projectService
             )
     {
 

@@ -3,7 +3,7 @@ package com.pinpal.page;
 
 import java.io.IOException;
 
-import com.pinpal.service.project.ProjectService;
+import com.pinpal.service.project.PinPalService;
 import org.apache.commons.lang.Validate;
 import org.rendersnake.HtmlCanvas;
 import org.rendersnake.Renderable;
@@ -14,9 +14,9 @@ import static org.rendersnake.HtmlAttributesFactory.*;
 public class PinItPage extends HeaderFooter implements Renderable
 {
 
-    public ProjectService _projectService;
+    public PinPalService _projectService;
 
-    public PinItPage(ProjectService projectService)
+    public PinItPage(PinPalService projectService)
     {
 
         Validate.notNull(projectService, "projectService cannot be null");
@@ -47,7 +47,7 @@ public class PinItPage extends HeaderFooter implements Renderable
                 .div(class_("main active"))
 
                 .div(class_("image-container"))
-                .img(class_("photo-image").id("blah").src("").alt(""))
+                .img(class_("photo-image").id("blah").src(_projectService.getImageBytes()).alt(""))
                 ._div()
 
 

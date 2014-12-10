@@ -3,7 +3,7 @@ package com.pinpal.page;
 
 import java.io.IOException;
 
-import com.pinpal.service.project.ProjectService;
+import com.pinpal.service.project.PinPalService;
 import org.apache.commons.lang.Validate;
 import org.rendersnake.HtmlCanvas;
 import org.rendersnake.Renderable;
@@ -14,9 +14,9 @@ import static org.rendersnake.HtmlAttributesFactory.*;
 public class PhotoPage extends HeaderFooter implements Renderable
 {
 
-    public ProjectService _projectService;
+    public PinPalService _projectService;
 
-    public PhotoPage(ProjectService projectService)
+    public PhotoPage(PinPalService projectService)
     {
 
         Validate.notNull(projectService, "projectService cannot be null");
@@ -64,13 +64,15 @@ public class PhotoPage extends HeaderFooter implements Renderable
                 .div(class_("main active"))
 
                 .div(class_("image-container"))
-                .img(class_("photo-image").id("blah").src("").alt(""))
+                .img(class_("photo-image").id("blah").src(_projectService.getImageBytes()).alt(""))
                 ._div()
 
-                .input(type("file").id("file").onChange("readURL(this)").style("display:none"))
-                .input(type("button").id("btn-upload").class_("upload-button").value("Upload Photo"))
+                .form(id("uploadform").method("POST").enctype("multipart/form-data"))
+                .input(type("file").id("file").name("myImage").onChange("readURL(this)").style("display:none"))
 
-//                .input(type("button").class_("continue-product").id("continue").value("Continue"))
+                .input(type("submit").id("btn-upload").class_("upload-button").value("Upload Photo"))
+                ._form()
+
                 .a(href("/product/").id("continue")).content("Next")
 
                 ._div()
