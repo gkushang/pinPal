@@ -71,10 +71,12 @@ public class ProductPage extends HeaderFooter implements Renderable
 
                 ._div()
 
-                .div(class_("product-next"))
-                .a(href("/offer/").id("continue-next-on-prod").class_("product-next-a").style("float:right")).content("Next")
-                .a(href("/photo/").id("continue-back-on-prod").class_("product-next-a").style("float:left")).content("Back")
-                ._div()
+//                .div(class_("product-next"))
+//                .a(href("/offer/").id("continue-next-on-prod").class_("product-next-a").style("float:right")).content("Next")
+                .a(href("/offer/").id("continue")).content("Next")
+                .a(href("/photo/").id("back")).content("Back")
+//                .a(href("/photo/").id("continue-back-on-prod").class_("product-next-a").style("float:left")).content("Back")
+//                ._div()
 
 
                 ._div()

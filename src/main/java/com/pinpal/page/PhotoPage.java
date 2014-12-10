@@ -60,7 +60,9 @@ public class PhotoPage extends HeaderFooter implements Renderable
                 .input(type("submit").id("btn-upload").class_("upload-button").value("Upload Photo"))
                 ._form()
 
-                .a(href("/product/").id("continue")).content("Next")
+//                .div(id("continue-div"))
+                .a(href("/product/").id("continue").class_("next-photo")).content("Next")
+//                ._div()
 
                 ._div()
                 ._div()

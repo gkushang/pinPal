@@ -51,33 +51,56 @@ div.main
    border: solid 1px transparent;
    width:70%;
    margin: 0 auto;
+           overflow:hidden;
+           position:relative;
+
+
 
  }
 
-#continue:hover
+#continue:hover, #back:hover
 {
    text-decoration:underline;
 
-   padding-bottom: 8px;
 }
 
 #continue
 {
-  color:#009cde;
+    color:#009cde;
 
-  width:6%;
-  height:3%;
 
-  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
-  font-size:16px;
-  letter-spacing: 0.9px;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size:16px;
+    letter-spacing: 1.2px;
 
-  float:right;
-   margin-top:365;
-    display: inline-block;
     text-decoration:none;
+
+
+    padding: 0px 20px 0px 0px;
+
+    float:right;
+    position: absolute;
+    bottom: 10;
+    right:0;
 
 }
 
+#back
+{
+    color:#009cde;
+
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size:16px;
+    letter-spacing: 1.2px;
+
+    text-decoration:none;
+
+    padding: 0px 0px 0px 20px;
+
+    float:left;
+    position: absolute;
+    bottom: 10;
+    left:0;
+}
 
 
