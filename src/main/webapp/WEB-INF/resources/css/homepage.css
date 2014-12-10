@@ -46,7 +46,7 @@ span.active
 div.main-step
 {
  text-align:center;
-
+ overflow: hidden;
 
 }
 
@@ -58,8 +58,6 @@ div.main
    border: solid 1px transparent;
    width:70%;
    margin: 0 auto;
-
-
 
 }
 
@@ -85,6 +83,7 @@ div.main
    margin-top:365;
     display: inline-block;
     text-decoration:none;
+
 }
 
 
