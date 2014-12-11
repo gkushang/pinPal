@@ -32,21 +32,20 @@ jQuery(document).ready(function() {
         $(".continue-offer").on('click',function() {
 
         var me = $(this);
-        var retailprice = $("#r-price-id").val();
-        var discountpercentage = $("#d-perc-id").val();
-        var discountprice = $("#d-price-id").val();
-        var startdate = $("#s-date-id").val();
-        var enddate = $("#e-date-id").val();
+        var retail_price = $("#r-price-id").val();
+        var discount_percentage = $("#d-perc-id").val();
+        var discount_price = $("#d-price-id").val();
+        var start_date = $("#s-date-id").val();
+        var end_date = $("#e-date-id").val();
              $.ajax({
 
                 type: "POST",
                 url: "/save-offer/"
-                data:{retailprice:retailprice,
-                discountpercentage:discountpercentage,
-                discountprice:discountprice,
-                startdate:startdate,
-                enddate:enddate
-                }
+                data:{retail_price:retail_price,
+                discount_percentage:discount_percentage,
+                discount_price:discount_price,
+                start_date:start_date,
+                end_date:end_date}
                     }).done(function(data) {
 
 

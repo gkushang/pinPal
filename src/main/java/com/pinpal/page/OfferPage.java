@@ -78,7 +78,7 @@ public class OfferPage extends HeaderFooter implements Renderable
                 ._div()
 
 
-                .a(href("/pin-it/").id("continue").style("float:right").class_("next-offer")).content("Next")
+                .a(href("/pin-it/").id("continue").style("float:right").class_("continue-offer")).content("Next")
                 .a(href("/product/").id("back")).content("Back")
 
 
