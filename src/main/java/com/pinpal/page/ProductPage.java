@@ -61,12 +61,12 @@ public class ProductPage extends HeaderFooter implements Renderable
 
                 .div(id("element-item"))
                 .span(class_("element-title").id("element-item")).content("Item Name").br()
-                .input(type("text").class_("element-box").id("item-id").value("")).br()
+                .input(type("text").class_("element-box").id("item-id").value(_pinPalService.getItemName())).br()
                 ._div()
 
                 .div(id("element-sku"))
                 .span(class_("element-title").id("element-sku")).content("SKU").br()
-                .input(type("text").class_("element-box").id("sku-id").value("")).br()
+                .input(type("text").class_("element-box").id("sku-id").value(_pinPalService.getSku())).br()
                 ._div()
 
                 ._div()
