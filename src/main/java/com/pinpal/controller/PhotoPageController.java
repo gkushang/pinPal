@@ -65,7 +65,6 @@ public class PhotoPageController
 
         try
         {
-            //just temporary save file info into ufile
 
             ufile.length = mpf.getBytes().length;
             ufile.bytes = mpf.getBytes();
@@ -81,7 +80,7 @@ public class PhotoPageController
 
 
             _pinPalService.setImageBytes(ufile.bytes);
-//
+
         }
         catch (IOException e)
         {
@@ -89,8 +88,6 @@ public class PhotoPageController
             e.printStackTrace();
         }
 
-        //2. send it back to the client as <img> that calls get method
-        //we are using getTimeInMillis to avoid server cached image
 
         System.out.println("\n\nworked\n\n");
         System.out.println(System.getProperty("user.dir"));

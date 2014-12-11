@@ -1,8 +1,6 @@
 package com.pinpal.controller;
 
-/**
- * Created by kugajjar on 12/9/14.
- */
+
 public class UploadedFile
 {
     public int length;
