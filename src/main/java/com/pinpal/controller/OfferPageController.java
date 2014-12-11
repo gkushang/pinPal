@@ -46,11 +46,11 @@ public class OfferPageController
                     HttpServletRequest request
             ) throws IOException
     {
-        _pinPalService.setRetailPrice(request.getParameter("r-price-id"));
-        _pinPalService.setDiscountPercentage(request.getParameter("d-perc-id"));
-        _pinPalService.setDiscountPrice(request.getParameter("d-price-id"));
-        _pinPalService.setStartDate(request.getParameter("s-date-id"));
-        _pinPalService.setEndDate(request.getParameter("e-date-id"));
+        _pinPalService.setRetailPrice(request.getParameter("retail_price"));
+        _pinPalService.setDiscountPercentage(request.getParameter("discount_percentage"));
+        _pinPalService.setDiscountPrice(request.getParameter("discount_price"));
+        _pinPalService.setStartDate(request.getParameter("start_date"));
+        _pinPalService.setEndDate(request.getParameter("end_date"));
 
     }
 

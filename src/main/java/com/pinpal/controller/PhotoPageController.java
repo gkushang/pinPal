@@ -103,7 +103,7 @@ public class PhotoPageController
             )
 
     {
-        System.out.println(filename);
+        System.out.println(System.getProperty("user.dir") + "/src/main/webapp/images/" + filename);
         //return (new File(System.getProperty("user.dir") + "/src/main/webapp/images/" + filename)).toString();
         return null;
     }

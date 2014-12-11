@@ -8,17 +8,19 @@ jQuery(document).ready(function() {
         var me = $(this);
         var description = $("#description").val();
         var manufacture_id = $("#manufacture-id").val();
-        var item_id = $("#item-id").val();
-        var sku_id = $("#sku-id").val();
+        var item_id = $("#item_id").val();
+        var sku_id = $("#sku_id").val();
 
              $.ajax({
 
                 type: "POST",
                 url: "/save-product/",
+
                 data:{description:description,
                 manufacture_id:manufacture_id,
                 item_id:item_id,
                 sku_id:sku_id}
+
                     }).done(function(data) {
 
                                                           });
@@ -38,17 +40,16 @@ jQuery(document).ready(function() {
         var start_date = $("#s-date-id").val();
         var end_date = $("#e-date-id").val();
              $.ajax({
-
                 type: "POST",
-                url: "/save-offer/"
+                url: "/save-offer/",
+
                 data:{retail_price:retail_price,
                 discount_percentage:discount_percentage,
                 discount_price:discount_price,
                 start_date:start_date,
                 end_date:end_date}
+
                     }).done(function(data) {
-
-
 
                                                           });
 
