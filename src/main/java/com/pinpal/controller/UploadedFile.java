@@ -9,5 +9,6 @@ public class UploadedFile
     public byte[] bytes;
     public String name;
     public String type;
+    public String path;
 
 }

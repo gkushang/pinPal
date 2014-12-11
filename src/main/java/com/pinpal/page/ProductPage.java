@@ -50,13 +50,13 @@ public class ProductPage extends HeaderFooter implements Renderable
                 .img(class_("photo-image").id("blah").src(_pinPalService.getImage()).alt(""))
                 ._div()
 
-                .div(class_("product-description"))
+                .div(id("product-description"))
                 .span(class_("element-title")).content("Description").br()
-                .textarea(class_("prd-description").id("description").cols("20").rows("3")).content("").br()
+                .textarea(class_("prd-description").id("description").cols("20").rows("3")).content(_pinPalService.getDescription()).br()
 
                 .div(id("element-man"))
                 .span(class_("element-title").id("element-man")).content("Manufacture").br()
-                .input(type("text").class_("element-box").id("manufacture-id").value("")).br()
+                .input(type("text").class_("element-box").id("manufacture-id").value(_pinPalService.getManufacture())).br()
                 ._div()
 
                 .div(id("element-item"))
@@ -73,7 +73,7 @@ public class ProductPage extends HeaderFooter implements Renderable
 
 //                .div(class_("product-next"))
 //                .a(href("/offer/").id("continue-next-on-prod").class_("product-next-a").style("float:right")).content("Next")
-                .a(href("/offer/").id("continue")).content("Next")
+                .a(href("/offer/").id("continue").class_("continue-product")).content("Next")
                 .a(href("/photo/").id("back")).content("Back")
 //                .a(href("/photo/").id("continue-back-on-prod").class_("product-next-a").style("float:left")).content("Back")
 //                ._div()

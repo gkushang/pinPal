@@ -56,7 +56,13 @@ public class PinItPage extends HeaderFooter implements Renderable
                                 "        ?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F\n" +
                                 "        &media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg\n" +
                                 "        &description=Next%20stop%3A%20Pinterest").id("continue-next-on-prod"))
-                .img(src("//assets.pinterest.com/images/pidgets/pin_it_button.png").id("pin-it-button"))._a()
+                .img(src("//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png").id("pin-it-button"))._a()
+
+
+                .a(href("https://www.pinterest.com/pin/create/button/\n" +
+                                "        ?url=" + _projectService.getImage()).id("continue-next-on-prod"))
+                .img(src("//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png").id("pin-it-button"))._a()
+
 
                 ._div()
 

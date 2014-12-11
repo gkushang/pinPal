@@ -6,15 +6,20 @@ jQuery(document).ready(function() {
 
 
         var me = $(this);
+        var description = $("#description").val();
+        var manufacture_id = $("#manufacture-id").val();
+//        var item-id = $("#item-id").val();
+//        var sku-id = $("#sku-id").val();
 
              $.ajax({
 
                 type: "POST",
-                url: "/upload-photo/"
-
+                url: "/save-product/",
+                data:{description:description,
+                manufacture_id:manufacture_id}
+//                       item-id:item-id,
+//                       sku-id:sku-id}
                     }).done(function(data) {
-
-                    top.location.href = "/product/";
 
                                                           });
 
@@ -31,11 +36,11 @@ jQuery(document).ready(function() {
              $.ajax({
 
                 type: "POST",
-                url: "/upload-product/"
+                url: "/save-offer/"
 
                     }).done(function(data) {
 
-                    top.location.href = "/offer/";
+
 
                                                           });
 

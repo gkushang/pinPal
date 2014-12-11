@@ -19,8 +19,6 @@ function readURL(input) {
                         .width(150)
                         .height(200);
 
-//alert(JSON.stringify(e.target.result));
-
                 };
            reader.readAsDataURL(input.files[0]);
 
@@ -39,15 +37,6 @@ function readURL(input) {
                  }
                });
 
-//           alert($("#file").val());
 
-//                     $.ajax({
-//
-//                                type: "POST",
-//                                url: "/upload-photo/",
-//                                data:{comments: e.target.result}
-//
-//                                    }).done(function(data) {
-//                        });
             }
         }

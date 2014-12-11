@@ -1,6 +1,7 @@
 package com.pinpal.controller;
 
 import java.io.IOException;
+import javax.servlet.http.HttpServletRequest;
 
 import com.pinpal.page.OfferPage;
 import com.pinpal.service.project.PinPalService;
@@ -38,15 +39,14 @@ public class OfferPageController
         html.render(new OfferPage(_projectService));
     }
 
-    @RequestMapping(value = {"/upload-product/"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/save-offer/"}, method = RequestMethod.POST)
     @ResponseBody
-    protected void uploadPhoto
+    public void saveProduct
             (
-
-            )
+                    HttpServletRequest request
+            ) throws IOException
     {
-
-
+        System.out.println("\nSave here\n");
     }
 }
 
