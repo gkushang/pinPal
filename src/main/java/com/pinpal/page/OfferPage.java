@@ -14,14 +14,14 @@ import static org.rendersnake.HtmlAttributesFactory.*;
 public class OfferPage extends HeaderFooter implements Renderable
 {
 
-    public PinPalService _projectService;
+    public PinPalService _pinPalService;
 
-    public OfferPage(PinPalService projectService)
+    public OfferPage(PinPalService pinPalService)
     {
 
-        Validate.notNull(projectService, "projectService cannot be null");
+        Validate.notNull(pinPalService, "projectService cannot be null");
 
-        _projectService = projectService;
+        _pinPalService = pinPalService;
 
     }
 
@@ -48,33 +48,33 @@ public class OfferPage extends HeaderFooter implements Renderable
                 .div(class_("main active"))
 
                 .div(class_("image-container"))
-                .img(class_("photo-image").id("blah").src(_projectService.getImage()).alt(""))
+                .img(class_("photo-image").id("blah").src(_pinPalService.getImage()).alt(""))
                 ._div()
 
 
                 .div(id("element-r-price"))
                 .span(class_("element-title").id("element-r-price")).content("Retail Price $").br()
-                .input(type("text").class_("element-box").id("r-price-id").value("")).br()
+                .input(type("text").class_("element-box").id("r-price-id").value(_pinPalService.getRetailPrice())).br()
                 ._div()
 
                 .div(id("element-d-perc"))
                 .span(class_("element-title").id("element-d-perc")).content("Discount %").br()
-                .input(type("text").class_("element-box").id("d-perc-id").value("")).br()
+                .input(type("text").class_("element-box").id("d-perc-id").value(_pinPalService.getDiscountPercentage())).br()
                 ._div()
 
                 .div(id("element-d-price"))
                 .span(class_("element-title").id("element-d-price")).content("Discount Price $").br()
-                .input(type("text").class_("element-box").id("d-price-id").value("")).br()
+                .input(type("text").class_("element-box").id("d-price-id").value(_pinPalService.getDiscountPrice())).br()
                 ._div()
 
                 .div(id("element-s-date"))
                 .span(class_("element-title").id("element-s-date")).content("Start Date").br()
-                .input(type("text").class_("element-box").id("s-date-id").value("")).br()
+                .input(type("text").class_("element-box").id("s-date-id").value(_pinPalService.getStartDate())).br()
                 ._div()
 
                 .div(id("element-e-date"))
                 .span(class_("element-title").id("element-e-date")).content("End Date").br()
-                .input(type("text").class_("element-box").id("e-date-id").value("")).br()
+                .input(type("text").class_("element-box").id("e-date-id").value(_pinPalService.getEndDate())).br()
                 ._div()
 
 
