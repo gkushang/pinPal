@@ -36,7 +36,7 @@ public interface PinPalService
 
     void setDiscountPrice(String discountPrice);
 
-    void seDiscountPercentage(String discountPercentage);
+    void setDiscountPercentage(String discountPercentage);
 
     void setStartDate(String startDate);
 

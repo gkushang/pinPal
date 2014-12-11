@@ -130,7 +130,7 @@ public class PinPalServiceImpl implements PinPalService
     }
 
     @Override
-    public void seDiscountPercentage(String discountPercentage)
+    public void setDiscountPercentage(String discountPercentage)
     {
         this.discountPercentage = discountPercentage;
     }

@@ -17,16 +17,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class OfferPageController
 {
 
-    private final PinPalService _projectService;
+    private final PinPalService _pinPalService;
 
     @Autowired
     public OfferPageController
             (
-                    PinPalService projectService
+                    PinPalService pinPalService
             )
     {
 
-        _projectService = projectService;
+        _pinPalService = pinPalService;
     }
 
     @RequestMapping(value = {"/offer/"})
@@ -36,17 +36,22 @@ public class OfferPageController
                     HtmlCanvas html
             ) throws IOException
     {
-        html.render(new OfferPage(_projectService));
+        html.render(new OfferPage(_pinPalService));
     }
 
     @RequestMapping(value = {"/save-offer/"}, method = RequestMethod.POST)
     @ResponseBody
-    public void saveProduct
+    public void saveOffer
             (
                     HttpServletRequest request
             ) throws IOException
     {
-        System.out.println("\nSave here\n");
-    }
-}
+        _pinPalService.setRetailPrice(request.getParameter("r-price-id"));
+        _pinPalService.setDiscountPercentage(request.getParameter("d-perc-id"));
+        _pinPalService.setDiscountPrice(request.getParameter("d-price-id"));
+        _pinPalService.setStartDate(request.getParameter("s-date-id"));
+        _pinPalService.setEndDate(request.getParameter("e-date-id"));
 
+    }
+
+}

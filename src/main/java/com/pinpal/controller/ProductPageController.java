@@ -49,8 +49,8 @@ public class ProductPageController
     {
         _pinPalService.setDescription(request.getParameter("description"));
         _pinPalService.setManufacture(request.getParameter("manufacture_id"));
-        _pinPalService.setItemName(request.getParameter("item-id"));
-        _pinPalService.setSKU(request.getParameter("sku-id"));
+        _pinPalService.setItemName(request.getParameter("item_id"));
+        _pinPalService.setSKU(request.getParameter("sku_id"));
 
     }
 
