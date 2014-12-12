@@ -51,24 +51,6 @@ public class PinItPage extends HeaderFooter implements Renderable
                 ._div()
 
 
-//                .div(id("share"))
-//                .input(type("checkbox").class_("check-box").id("pintrestMyPage").value(""))
-//                .write("Post to My Pintrest")
-//                .br().br()
-//                ._div()
-//                .div(id("share"))
-//                .input(type("checkbox").class_("check-box").id("paypalpintrest").value("").checked("checked"))
-//                .write("Post to PayPal Pintrest")
-//                .br().br()
-//                ._div()
-//
-//                .div(id("share"))
-//                .input(type("checkbox").class_("check-box").id("pintrestMyPage").value("").checked("checked"))
-//                .write("Post to Paypal Deals")
-//                .br().br()
-//                ._div()
-
-
                 .div(class_("pin-it-btn-div"))
                 .a(href("//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fstage2md053.qa.paypal.com%2Fdeals%2F%23%2Foffers%2Fdetails%2F947eccb0-63ac-0132-d39f-7a163e6a7efb&media=http%3A%2F%2Fi57.tinypic.com%2Fj7x3kk.png&description=" + _projectService
                         .getDescription()))
