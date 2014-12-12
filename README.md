@@ -1,4 +1,4 @@
-cukesRepo
+pinPal
 =========
 
 <br/>
@@ -15,7 +15,7 @@ The prefered IDE is IntelliJ IDEA 12. Dependency and project setup sections are 
 
 1. Click Run and then Edit Configurations…
 
-2. Set the configuration name (e.g. CukesRepo) and tick the *Single instance only* checkbox
+2. Set the configuration name (e.g. pinPal) and tick the *Single instance only* checkbox
 
 3. Add a *Make* configuration to the *Before launch* section
 
@@ -81,25 +81,6 @@ The prefered IDE is IntelliJ IDEA 12. Dependency and project setup sections are 
     
         mongod
 
-3. RabbitMQ
-
-    3.1. Installation
-    
-        brew install rabbitmq
-        
-    3.2. Running the server
-    
-        rabbitmq-server
-
-4. Memcache
-
-    4.1. Installation
-
-        brew install memcached
-
-    4.2. Running the daemon
-        
-        memcached
 
 
 <br/>
