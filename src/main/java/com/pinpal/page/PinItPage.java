@@ -47,13 +47,13 @@ public class PinItPage extends HeaderFooter implements Renderable
                 .div(class_("main active"))
 
                 .div(class_("image-container"))
-                .img(class_("photo-image").id("blah").src(_projectService.getImage()).alt(""))
+                .img(class_("pinit-image").id("blah").src("http://i57.tinypic.com/j7x3kk.png").alt(""))
                 ._div()
 
 
                 .div(class_("pin-it-btn-div"))
-                .a(href("//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fstage2md053.qa.paypal.com%2Fdeals%2F%23%2Foffers%2Fdetails%2F947eccb0-63ac-0132-d39f-7a163e6a7efb&media=http%3A%2F%2Fi57.tinypic.com%2Fj7x3kk.png&description=" + _projectService
-                        .getDescription()))
+                .a(href("//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fstage2md053.qa.paypal.com%2Fdeals%2F%23%2Foffers%2Fdetails%2F947eccb0-63ac-0132-d39f-7a163e6a7efb&media=http%3A%2F%2Fi57.tinypic.com%2Fj7x3kk.png&description=" +
+                                "20% Off Scuderia Ferrari R200 Headphones"))
                 .img(src("//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png"))._a().br().br()
 
                 .img(src("http://s7.postimg.org/re9es4dxj/1688856378692136946.png").alt("Smiley face").width("40").height("40")).br().br()
