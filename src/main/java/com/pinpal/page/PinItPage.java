@@ -70,7 +70,7 @@ public class PinItPage extends HeaderFooter implements Renderable
 
 
                 .div(class_("pin-it-btn-div"))
-                .a(href("//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fstage2md053.qa.paypal.com%2Fdeals%2F%23%2Foffers%2Fdetails%2F947eccb0-63ac-0132-d39f-7a163e6a7efb&media=http%3A%2F%2Fi59.tinypic.com%2F2q3rzvk.jpg&description=" + _projectService
+                .a(href("//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fstage2md053.qa.paypal.com%2Fdeals%2F%23%2Foffers%2Fdetails%2F947eccb0-63ac-0132-d39f-7a163e6a7efb&media=http%3A%2F%2Fi57.tinypic.com%2Fj7x3kk.png&description=" + _projectService
                         .getDescription()))
                 .img(src("//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png"))._a().br().br()
 
@@ -78,7 +78,7 @@ public class PinItPage extends HeaderFooter implements Renderable
 
                 .img(src("http://s21.postimg.org/scbr9fi3n/twitter_icon_128_1262922753.png").alt("Smiley face").width("40").height("40")).br().br()
 
-                .img(src("  http://s4.postimg.org/d7jkle13d/instagram_icon_128_1826619604.png").alt("Smiley face").width("40").height("40"))
+                .img(src("  http://s4.postimg.org/d7jkle13d/instagram_icon_128_1826619604.png").alt("Smiley face").width("42").height("42"))
 
 
                 ._div()
