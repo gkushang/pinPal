@@ -49,13 +49,26 @@ public class PinItPage extends HeaderFooter implements Renderable
                 .div(class_("image-container"))
                 .img(class_("photo-image").id("blah").src(_projectService.getImage()).alt(""))
                 ._div()
+                .div(id("share"))
+                .input(type("checkbox").class_("check-box").id("pintrestMyPage").value(""))
+                .write("Post to My Pintrest")
+                .br().br()
+                ._div()
+                .div(id("share"))
+                .input(type("checkbox").class_("check-box").id("paypalpintrest").value("").checked("checked"))
+                .write("Post to PayPal Pintrest")
+                .br().br()
+                ._div()
+
+                .div(id("share"))
+                .input(type("checkbox").class_("check-box").id("pintrestMyPage").value("").checked("checked"))
+                .write("Post to Paypal Deals")
+                .br().br()
+                ._div()
 
 
                 .div(class_("pin-it-btn-div"))
-//                .a(href("//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=file%3A%2F%2F%2FUsers%2Fmaduraisamy%2FPaypal%2FpinPal%2Fsrc%2Fmain%2Fwebapp%2Fimages%2Fflip_speakers_with_travel_case_.png&description=Next%20stop%3A%20Pinterest\" data-pin-do=\"buttonPin\" data-pin-config=\"above\" data-pin-color=\"red\" data-pin-height=\"28\"").id("continue-next-on-prod"))
-//                .img(src("//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png").id("pin-it-button"))._a()
-
-                .a(href("//www.pinterest.com/pin/create/button/?url=href%3D%26quot%3Bhttp%3A%2F%2Ftinypic.com%3Fref%3D2vs1bmq%26quot%3B%20target%3D%26quot%3B_blank%26quot%3B%26gt%3B%26lt%3Bimg%20src%3D%26quot%3Bhttp%3A%2F%2Fi60.tinypic.com%2F2vs1bmq.png%26quot%3B%20border%3D%26quot%3B0%26quot%3B%20alt%3D%26quot%3BImage%20and%20video%20hosting%20by%20TinyPic%26quot%3B&media=http%3A%2F%2Fi60.tinypic.com%2F2vs1bmq.png&description=" + _projectService
+                .a(href("//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fstage2md053.qa.paypal.com%2Fdeals%2F%23%2Foffers%2Fdetails%2F947eccb0-63ac-0132-d39f-7a163e6a7efb&media=http%3A%2F%2Fi59.tinypic.com%2F2q3rzvk.jpg&description=" + _projectService
                         .getDescription()))
                 .img(src("//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png"))._a()
 
