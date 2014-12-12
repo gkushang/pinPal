@@ -53,6 +53,7 @@ public class ProductPage extends HeaderFooter implements Renderable
                 .div(id("product-description"))
                 .span(class_("element-title")).content("Description").br()
                 .textarea(class_("prd-description").id("description").cols("20").rows("3")).content(_pinPalService.getDescription()).br()
+                ._div()
 
                 .div(id("element-man"))
                 .span(class_("element-title").id("element-man")).content("Manufacture").br()
@@ -67,8 +68,6 @@ public class ProductPage extends HeaderFooter implements Renderable
                 .div(id("element-sku"))
                 .span(class_("element-title").id("element-sku")).content("SKU").br()
                 .input(type("text").class_("element-box").id("sku_id").value(_pinPalService.getSku())).br()
-                ._div()
-
                 ._div()
 
 
