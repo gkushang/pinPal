@@ -76,7 +76,7 @@ public class PinItPage extends HeaderFooter implements Renderable
 
                 .img(src("http://s7.postimg.org/re9es4dxj/1688856378692136946.png").alt("Smiley face").width("40").height("40")).br().br()
 
-                .img(src("http://s22.postimg.org/eeraf6f19/5736343191104321411.png").alt("Smiley face").width("30").height("30")).br().br()
+                .img(src("http://s21.postimg.org/scbr9fi3n/twitter_icon_128_1262922753.png").alt("Smiley face").width("40").height("40")).br().br()
 
                 .img(src("  http://s4.postimg.org/d7jkle13d/instagram_icon_128_1826619604.png").alt("Smiley face").width("40").height("40"))
 
