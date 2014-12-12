@@ -7,17 +7,14 @@
   margin-top:50px;
   float:center;
   margin-left:38px;
-  margin-top:2px;
+  margin-top:10px;
   resize:none;
 
 }
 
-.product-description
+#product-description
 {
- text-align:left;
- margin-top:20px;
-
-
+ padding:15px;
 }
 
 .element-title
@@ -25,7 +22,7 @@
    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
    font-size:12px;
    letter-spacing: 0.9px;
-   padding:40px;
+   padding:40px 40px 40px 40px;
    color:gray;
    font-weight:bold;
 
